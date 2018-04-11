@@ -1,14 +1,8 @@
 class SongsController < ApplicationController
-  def index
-  end
 
-  def show
-  end
-
-  def new
-  end
 
   def create
+    byebug
     @song = Song.new(song_params)
 
     if @song.save
@@ -47,4 +41,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title)
   end
 end
-
